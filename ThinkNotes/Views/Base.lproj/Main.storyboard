@@ -16,69 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-Di-2mV">
-                                <rect key="frame" x="30" y="347" width="354" height="410"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNj-MD-Ey2">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-pE-UuB">
-                                        <rect key="frame" x="0.0" y="90" width="354" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dNn-2B-RLf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-fp-wv5">
-                                        <rect key="frame" x="0.0" y="180" width="354" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Login">
-                                                    <attributes>
-                                                        <font key="NSFont" size="24" name="Rockwell-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="LoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEy-wu-1AS"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User !! Sign Up Below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lST-yq-flT">
-                                        <rect key="frame" x="0.0" y="270" width="354" height="50"/>
-                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGI-nm-Fbv">
-                                        <rect key="frame" x="0.0" y="360" width="354" height="50"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Sign Up">
-                                                    <attributes>
-                                                        <font key="NSFont" size="24" name="Rockwell-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="p99-o4-eoJ" kind="show" id="g21-UG-6tO"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="wGI-nm-Fbv" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="O1U-Cu-1E6"/>
-                                    <constraint firstItem="lST-yq-flT" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="bVe-pE-CRO"/>
-                                    <constraint firstItem="hj5-pE-UuB" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="nCt-7k-qeK"/>
-                                    <constraint firstItem="9xh-fp-wv5" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="r9D-g4-Y6E"/>
-                                </constraints>
-                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LD8-No-Br1">
                                 <rect key="frame" x="20" y="165" width="374" height="162"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,24 +35,95 @@ Login to continue.</string>
                                     <outlet property="delegate" destination="TQv-ob-6Xy" id="L7N-Kd-cNQ"/>
                                 </connections>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-Di-2mV">
+                                <rect key="frame" x="30" y="369" width="354" height="450"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNj-MD-Ey2">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-pE-UuB">
+                                        <rect key="frame" x="0.0" y="80" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dNn-2B-RLf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-fp-wv5">
+                                        <rect key="frame" x="0.0" y="160" width="354" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Login">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Rockwell-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NZD-Xb-5Pt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cms-40-Ukd">
+                                        <rect key="frame" x="0.0" y="240" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                                        <color key="textColor" red="0.98892456293106079" green="0.12258689850568771" blue="0.0070632356218993664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User !! Sign Up Below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lST-yq-flT">
+                                        <rect key="frame" x="0.0" y="320" width="354" height="50"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGI-nm-Fbv">
+                                        <rect key="frame" x="0.0" y="400" width="354" height="50"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Sign Up">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Rockwell-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="p99-o4-eoJ" kind="show" id="g21-UG-6tO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lST-yq-flT" firstAttribute="height" secondItem="cms-40-Ukd" secondAttribute="height" id="6gR-K9-yHe"/>
+                                    <constraint firstItem="wGI-nm-Fbv" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="O1U-Cu-1E6"/>
+                                    <constraint firstItem="lST-yq-flT" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="bVe-pE-CRO"/>
+                                    <constraint firstItem="hj5-pE-UuB" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="nCt-7k-qeK"/>
+                                    <constraint firstItem="9xh-fp-wv5" firstAttribute="height" secondItem="BNj-MD-Ey2" secondAttribute="height" id="r9D-g4-Y6E"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LD8-No-Br1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Cbm-JC-TKC"/>
+                            <constraint firstItem="7gl-Di-2mV" firstAttribute="top" secondItem="LD8-No-Br1" secondAttribute="bottom" constant="42" id="G9n-Fl-MJd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LD8-No-Br1" secondAttribute="trailing" constant="20" id="Owi-AX-y8d"/>
                             <constraint firstItem="LD8-No-Br1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R7V-6H-jcs"/>
-                            <constraint firstItem="7gl-Di-2mV" firstAttribute="top" secondItem="LD8-No-Br1" secondAttribute="bottom" constant="20" id="T3f-Dc-Hc3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LD8-No-Br1" secondAttribute="trailing" constant="20" id="lZY-dT-XKn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wGI-nm-Fbv" secondAttribute="bottom" constant="43" id="qNQ-bJ-5r1"/>
                             <constraint firstItem="7gl-Di-2mV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="tS8-QC-5r8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gl-Di-2mV" secondAttribute="trailing" constant="30" id="xcd-jS-g7c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7gl-Di-2mV" secondAttribute="bottom" constant="105" id="xxJ-EA-lm9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ThinkNotes" id="TQv-ob-6Xy"/>
                     <connections>
                         <outlet property="EmailTextfield" destination="BNj-MD-Ey2" id="Lxe-76-ac1"/>
                         <outlet property="LoginButton" destination="9xh-fp-wv5" id="SFk-qN-izv"/>
+                        <outlet property="errorlabel" destination="cms-40-Ukd" id="Dt8-J7-kqS"/>
                         <outlet property="newLabel" destination="lST-yq-flT" id="IK9-Nc-s6M"/>
                         <outlet property="passwordTextfield" destination="hj5-pE-UuB" id="fFB-Sb-Ak0"/>
                         <outlet property="signupButton" destination="wGI-nm-Fbv" id="q9X-hP-z9Z"/>
@@ -212,10 +220,17 @@ Login to continue.</string>
             </objects>
             <point key="canvasLocation" x="2005.7971014492755" y="-180.13392857142856"/>
         </scene>
+<<<<<<< HEAD
+        <!--Login View Controller-->
+        <scene sceneID="Mcx-5h-Y5Z">
+            <objects>
+                <viewController storyboardIdentifier="login" id="kRY-Wm-b3K" customClass="LoginViewController" sceneMemberID="viewController">
+=======
         <!--ThinkNotes-->
         <scene sceneID="Mcx-5h-Y5Z">
             <objects>
                 <viewController storyboardIdentifier="home" id="kRY-Wm-b3K" customClass="HomeViewcontroller" customModule="ThinkNotes" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> main
                     <view key="view" contentMode="scaleToFill" id="DZh-9p-ijR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,6 +284,9 @@ Login to continue.</string>
                             <constraint firstItem="tXF-jr-nk9" firstAttribute="leading" secondItem="EVM-f9-GP8" secondAttribute="leading" id="lmj-z6-6e4"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
+                    <navigationItem key="navigationItem" id="ZQm-dN-q00"/>
+=======
                     <navigationItem key="navigationItem" title="ThinkNotes" id="RrM-nK-Bfk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3y-Fd-uK0">
                             <connections>
@@ -280,6 +298,7 @@ Login to continue.</string>
                         <outlet property="noNOtes" destination="s1f-mR-TqQ" id="rFP-8x-2xO"/>
                         <outlet property="tblView" destination="tXF-jr-nk9" id="MwI-fQ-RmG"/>
                     </connections>
+>>>>>>> main
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFJ-Rq-Ln4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
