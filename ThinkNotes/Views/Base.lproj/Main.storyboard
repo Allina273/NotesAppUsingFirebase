@@ -220,17 +220,10 @@ Login to continue.</string>
             </objects>
             <point key="canvasLocation" x="2005.7971014492755" y="-180.13392857142856"/>
         </scene>
-<<<<<<< HEAD
-        <!--Login View Controller-->
-        <scene sceneID="Mcx-5h-Y5Z">
-            <objects>
-                <viewController storyboardIdentifier="login" id="kRY-Wm-b3K" customClass="LoginViewController" sceneMemberID="viewController">
-=======
         <!--ThinkNotes-->
         <scene sceneID="Mcx-5h-Y5Z">
             <objects>
                 <viewController storyboardIdentifier="home" id="kRY-Wm-b3K" customClass="HomeViewcontroller" customModule="ThinkNotes" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> main
                     <view key="view" contentMode="scaleToFill" id="DZh-9p-ijR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,9 +277,6 @@ Login to continue.</string>
                             <constraint firstItem="tXF-jr-nk9" firstAttribute="leading" secondItem="EVM-f9-GP8" secondAttribute="leading" id="lmj-z6-6e4"/>
                         </constraints>
                     </view>
-<<<<<<< HEAD
-                    <navigationItem key="navigationItem" id="ZQm-dN-q00"/>
-=======
                     <navigationItem key="navigationItem" title="ThinkNotes" id="RrM-nK-Bfk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h3y-Fd-uK0">
                             <connections>
@@ -298,7 +288,6 @@ Login to continue.</string>
                         <outlet property="noNOtes" destination="s1f-mR-TqQ" id="rFP-8x-2xO"/>
                         <outlet property="tblView" destination="tXF-jr-nk9" id="MwI-fQ-RmG"/>
                     </connections>
->>>>>>> main
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFJ-Rq-Ln4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

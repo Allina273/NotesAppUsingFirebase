@@ -52,14 +52,19 @@ class ViewController: UIViewController {
             else {
                 self.errorlabel.alpha = 1
                 self.errorlabel.text = "Successfully Logged IN"
-                
-//                let homeViewController = self.storyboard?.instantiateViewController(identifier: "login") as? LoginViewController
-//
-//                self.view.window?.rootViewController = homeViewController
-//                self.view.window?.makeKeyAndVisible()
+                // Transition to the home screen
+                self.transitionToHome()
             }
         }
     
+    }
+    func transitionToHome() {
+
+        let homeViewController = storyboard?.instantiateViewController(identifier: "home") as! HomeViewcontroller
+        self.navigationController?.pushViewController(homeViewController, animated: true)
+//        self.view.window?.rootViewController = homeViewController
+        self.view.window?.makeKeyAndVisible()
+
     }
     }
     

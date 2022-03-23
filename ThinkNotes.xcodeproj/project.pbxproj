@@ -20,7 +20,6 @@
 		35C6D5AE27E34D73005E8A06 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5AD27E34D73005E8A06 /* FirebaseDatabase */; };
 		35C6D5B027E34D73005E8A06 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5AF27E34D73005E8A06 /* FirebaseFirestore */; };
 		35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B627E354A7005E8A06 /* SignupViewController.swift */; };
-		35C6D5B927E354CE005E8A06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B827E354CE005E8A06 /* LoginViewController.swift */; };
 		35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5BB27E834C6005E8A06 /* Utilities.swift */; };
 		C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C127EADEF9003D844D /* HomeViewController.swift */; };
 		C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C727EAF1B5003D844D /* EntryViewController.swift */; };
@@ -38,7 +37,6 @@
 		35C6D59E27E34791005E8A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C6D5A427E34CAB005E8A06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		35C6D5B627E354A7005E8A06 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		35C6D5B827E354CE005E8A06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		35C6D5BB27E834C6005E8A06 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C9C675C127EADEF9003D844D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C9C675C727EAF1B5003D844D /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			children = (
 				35C6D59427E3478F005E8A06 /* ViewController.swift */,
 				35C6D5B627E354A7005E8A06 /* SignupViewController.swift */,
-				35C6D5B827E354CE005E8A06 /* LoginViewController.swift */,
 				C9C675C127EADEF9003D844D /* HomeViewController.swift */,
 				C9C675C727EAF1B5003D844D /* EntryViewController.swift */,
 				C9C675C927EAF8E2003D844D /* NoteViewController.swift */,
@@ -218,7 +215,6 @@
 				C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */,
 				35C6D59127E3478F005E8A06 /* AppDelegate.swift in Sources */,
 				35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */,
-				35C6D5B927E354CE005E8A06 /* LoginViewController.swift in Sources */,
 				C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */,
 				35C6D59327E3478F005E8A06 /* SceneDelegate.swift in Sources */,
 			);
