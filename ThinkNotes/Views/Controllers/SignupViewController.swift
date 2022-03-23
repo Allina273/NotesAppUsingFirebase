@@ -57,16 +57,33 @@ class SignupViewController: UIViewController{
             return "Please fill in all fields."
         }
         // Check if the password is secure
-        let cleanedPassword = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let correctPassword = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if isPasswordValid(cleanedPassword) == false {
+        if isPasswordValid(correctPassword) == false {
             // Password isn't secure enough
             return "Please make sure your password is at least 8 characters, contains a special character and a number."
         }
         
+        //  Check if the password and re type password matches
+        if correctPassword == RePassword.text {
+
+            print("registertologin")
+
+             } else {
+
+               print("Password Does Not Match Confirm Password")}
+
+              
+        
         return nil
     }
-    
+//    @IBAction func eyeButtonAction(_: Any) {
+//        if passwordTextField.isSecureTextEntry == false {
+//            passwordTextField.isSecureTextEntry = true
+//        } else {
+//            passwordTextField.isSecureTextEntry = false
+//        }
+//    }
     
         
     //    for password Validation
@@ -94,6 +111,7 @@ class SignupViewController: UIViewController{
             let lastName = Lastname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = Email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let repassword = RePassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Create the user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -106,7 +124,7 @@ class SignupViewController: UIViewController{
                 }
                 else {
                     
-                    // User was created successfully, now store the first name and last name
+                    // User was created successfully, now store the first name and last name in the firestore Database
                     let db = Firestore.firestore()
                     
                     var ref: DocumentReference? = nil
