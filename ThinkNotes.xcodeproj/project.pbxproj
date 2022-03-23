@@ -21,6 +21,7 @@
 		35C6D5B027E34D73005E8A06 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5AF27E34D73005E8A06 /* FirebaseFirestore */; };
 		35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B627E354A7005E8A06 /* SignupViewController.swift */; };
 		35C6D5B927E354CE005E8A06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B827E354CE005E8A06 /* LoginViewController.swift */; };
+		35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5BB27E834C6005E8A06 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		35C6D5A427E34CAB005E8A06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		35C6D5B627E354A7005E8A06 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		35C6D5B827E354CE005E8A06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		35C6D5BB27E834C6005E8A06 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		35C6D58F27E3478F005E8A06 /* ThinkNotes */ = {
 			isa = PBXGroup;
 			children = (
+				35C6D5BA27E834B6005E8A06 /* Helpers */,
 				35C6D5B527E34EC4005E8A06 /* Resources */,
 				35C6D5B327E34E8E005E8A06 /* ViewModel */,
 				35C6D5B227E34E7E005E8A06 /* Views */,
@@ -124,6 +127,14 @@
 				35C6D59227E3478F005E8A06 /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		35C6D5BA27E834B6005E8A06 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				35C6D5BB27E834C6005E8A06 /* Utilities.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */,
 				35C6D59527E3478F005E8A06 /* ViewController.swift in Sources */,
 				35C6D59127E3478F005E8A06 /* AppDelegate.swift in Sources */,
 				35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */,
