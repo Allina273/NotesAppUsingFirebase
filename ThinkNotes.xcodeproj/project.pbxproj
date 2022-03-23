@@ -22,6 +22,9 @@
 		35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B627E354A7005E8A06 /* SignupViewController.swift */; };
 		35C6D5B927E354CE005E8A06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B827E354CE005E8A06 /* LoginViewController.swift */; };
 		35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5BB27E834C6005E8A06 /* Utilities.swift */; };
+		C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C127EADEF9003D844D /* HomeViewController.swift */; };
+		C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C727EAF1B5003D844D /* EntryViewController.swift */; };
+		C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C927EAF8E2003D844D /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		35C6D5B627E354A7005E8A06 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		35C6D5B827E354CE005E8A06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		35C6D5BB27E834C6005E8A06 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C9C675C127EADEF9003D844D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C9C675C727EAF1B5003D844D /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		C9C675C927EAF8E2003D844D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,21 +82,12 @@
 			children = (
 				35C6D5BA27E834B6005E8A06 /* Helpers */,
 				35C6D5B527E34EC4005E8A06 /* Resources */,
-				35C6D5B327E34E8E005E8A06 /* ViewModel */,
 				35C6D5B227E34E7E005E8A06 /* Views */,
-				35C6D5B127E34E74005E8A06 /* Models */,
 				35C6D59927E34791005E8A06 /* Assets.xcassets */,
 				35C6D59E27E34791005E8A06 /* Info.plist */,
 				35C6D5A427E34CAB005E8A06 /* GoogleService-Info.plist */,
 			);
 			path = ThinkNotes;
-			sourceTree = "<group>";
-		};
-		35C6D5B127E34E74005E8A06 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		35C6D5B227E34E7E005E8A06 /* Views */ = {
@@ -103,19 +100,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		35C6D5B327E34E8E005E8A06 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		35C6D5B427E34EBA005E8A06 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				35C6D59427E3478F005E8A06 /* ViewController.swift */,
 				35C6D5B627E354A7005E8A06 /* SignupViewController.swift */,
 				35C6D5B827E354CE005E8A06 /* LoginViewController.swift */,
+				C9C675C127EADEF9003D844D /* HomeViewController.swift */,
+				C9C675C727EAF1B5003D844D /* EntryViewController.swift */,
+				C9C675C927EAF8E2003D844D /* NoteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -220,10 +213,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */,
+				C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */,
 				35C6D59527E3478F005E8A06 /* ViewController.swift in Sources */,
+				C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */,
 				35C6D59127E3478F005E8A06 /* AppDelegate.swift in Sources */,
 				35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */,
 				35C6D5B927E354CE005E8A06 /* LoginViewController.swift in Sources */,
+				C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */,
 				35C6D59327E3478F005E8A06 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
