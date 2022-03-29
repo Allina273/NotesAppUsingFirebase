@@ -52,7 +52,8 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
             self.items = newItems
 //            print(newItems)
 ////            DispatchQueue.main.async {
-
+           self.noNOtes.isHidden = true
+           self.tblView.isHidden=false
             self.tblView.reloadData()
         }
           
