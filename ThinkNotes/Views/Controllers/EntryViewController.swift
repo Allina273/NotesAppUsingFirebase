@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 class EntryViewController: UIViewController{
+//    var delegate : AddDelegate?
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var noteField: UITextView!
@@ -21,6 +22,7 @@ class EntryViewController: UIViewController{
     @objc func didTapSave() {
         if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty {
             completion?(text, noteField.text)
+//            delegate?.updateTableView()
         }
     }
 }
