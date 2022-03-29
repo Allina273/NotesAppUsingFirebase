@@ -13,7 +13,6 @@
 		35C6D59827E3478F005E8A06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C6D59627E3478F005E8A06 /* Main.storyboard */; };
 		35C6D59A27E34791005E8A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C6D59927E34791005E8A06 /* Assets.xcassets */; };
 		35C6D59D27E34791005E8A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C6D59B27E34791005E8A06 /* LaunchScreen.storyboard */; };
-		35C6D5A527E34CAB005E8A06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35C6D5A427E34CAB005E8A06 /* GoogleService-Info.plist */; };
 		35C6D5A827E34D73005E8A06 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5A727E34D73005E8A06 /* FirebaseAnalytics */; };
 		35C6D5AA27E34D73005E8A06 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5A927E34D73005E8A06 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		35C6D5AC27E34D73005E8A06 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5AB27E34D73005E8A06 /* FirebaseAuth */; };
@@ -21,9 +20,12 @@
 		35C6D5B027E34D73005E8A06 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5AF27E34D73005E8A06 /* FirebaseFirestore */; };
 		35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B627E354A7005E8A06 /* SignupViewController.swift */; };
 		35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5BB27E834C6005E8A06 /* Utilities.swift */; };
+		C933272427F2D0B600E61B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C933272327F2D0B600E61B48 /* GoogleService-Info.plist */; };
 		C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C127EADEF9003D844D /* HomeViewController.swift */; };
 		C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C727EAF1B5003D844D /* EntryViewController.swift */; };
 		C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C927EAF8E2003D844D /* NoteViewController.swift */; };
+		C9DA0BBD27EC8482001E5118 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA0BBC27EC8482001E5118 /* Notes.swift */; };
+		C9DA0BC127ED9506001E5118 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DA0BC027ED9506001E5118 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +37,14 @@
 		35C6D59927E34791005E8A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35C6D59C27E34791005E8A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35C6D59E27E34791005E8A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35C6D5A427E34CAB005E8A06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		35C6D5B627E354A7005E8A06 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		35C6D5BB27E834C6005E8A06 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C933272327F2D0B600E61B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9C675C127EADEF9003D844D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C9C675C727EAF1B5003D844D /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		C9C675C927EAF8E2003D844D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		C9DA0BBC27EC8482001E5118 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		C9DA0BC027ED9506001E5118 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +82,13 @@
 		35C6D58F27E3478F005E8A06 /* ThinkNotes */ = {
 			isa = PBXGroup;
 			children = (
+				C9DA0BBB27EC8472001E5118 /* Model */,
 				35C6D5BA27E834B6005E8A06 /* Helpers */,
 				35C6D5B527E34EC4005E8A06 /* Resources */,
 				35C6D5B227E34E7E005E8A06 /* Views */,
 				35C6D59927E34791005E8A06 /* Assets.xcassets */,
 				35C6D59E27E34791005E8A06 /* Info.plist */,
-				35C6D5A427E34CAB005E8A06 /* GoogleService-Info.plist */,
+				C933272327F2D0B600E61B48 /* GoogleService-Info.plist */,
 			);
 			path = ThinkNotes;
 			sourceTree = "<group>";
@@ -125,6 +130,15 @@
 				35C6D5BB27E834C6005E8A06 /* Utilities.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C9DA0BBB27EC8472001E5118 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9DA0BBC27EC8482001E5118 /* Notes.swift */,
+				C9DA0BC027ED9506001E5118 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C6D59D27E34791005E8A06 /* LaunchScreen.storyboard in Resources */,
+				C933272427F2D0B600E61B48 /* GoogleService-Info.plist in Resources */,
 				35C6D59A27E34791005E8A06 /* Assets.xcassets in Resources */,
 				35C6D59827E3478F005E8A06 /* Main.storyboard in Resources */,
-				35C6D5A527E34CAB005E8A06 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +228,10 @@
 				35C6D59527E3478F005E8A06 /* ViewController.swift in Sources */,
 				C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */,
 				35C6D59127E3478F005E8A06 /* AppDelegate.swift in Sources */,
+				C9DA0BBD27EC8482001E5118 /* Notes.swift in Sources */,
 				35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */,
 				C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */,
+				C9DA0BC127ED9506001E5118 /* User.swift in Sources */,
 				35C6D59327E3478F005E8A06 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

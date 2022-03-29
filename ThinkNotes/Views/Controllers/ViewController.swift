@@ -9,7 +9,8 @@ import UIKit
 import FirebaseAuth
 
 class ViewController: UIViewController {
-
+    //
+    var handle: AuthStateDidChangeListenerHandle?
     @IBOutlet weak var EmailTextfield: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var errorlabel: UILabel!
@@ -25,6 +26,29 @@ class ViewController: UIViewController {
         
         
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        handle = Auth.auth().addStateDidChangeListener({ _, user in
+            if user == nil {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+            else{
+                self.transitionToHome()
+//                self.performSegue(withIdentifier: "showw", sender: nil)
+                self.EmailTextfield.text = nil
+                self.passwordTextfield.text = nil
+            }
+        })
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        guard let handle = handle else {
+            return
+        }
+        Auth.auth().removeStateDidChangeListener(handle)
     }
     func setUpElements(){
         Utilities.styleTextField(EmailTextfield)
@@ -49,12 +73,12 @@ class ViewController: UIViewController {
                 self.errorlabel.text = error!.localizedDescription
                 self.errorlabel.alpha = 1
             }
-            else {
-                self.errorlabel.alpha = 1
-                self.errorlabel.text = "Successfully Logged IN"
+//            else {
+////                self.errorlabel.alpha = 1
+////                self.errorlabel.text = "Successfully Logged IN"
                 // Transition to the home screen
-                self.transitionToHome()
-            }
+//                self.transitionToHome()
+//            }
         }
     
     }

@@ -12,6 +12,7 @@ import Firebase
 
 class SignupViewController: UIViewController{
     
+    var handle: AuthStateDidChangeListenerHandle?
     @IBOutlet weak var Firstname: UITextField!
     @IBOutlet weak var Lastname: UITextField!
     @IBOutlet weak var Password: UITextField!
@@ -25,6 +26,29 @@ class SignupViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+//        handle = Auth.auth().addStateDidChangeListener({ _, user in
+//            if user == nil {
+//                self.navigationController?.popToRootViewController(animated: true)
+//            }
+//            else{
+////                self.performSegue(withIdentifier: "showw", sender: nil)
+//                self.transitionToHome()
+//                self.Email.text = nil
+//                self.Password.text = nil
+//
+//            } })
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        guard let handle = handle else {
+            return
+        }
+        Auth.auth().removeStateDidChangeListener(handle)
     }
     
     func setUpElements(){
@@ -111,7 +135,7 @@ class SignupViewController: UIViewController{
             let lastName = Lastname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = Email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let repassword = RePassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            _ = RePassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             // Create the user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -123,20 +147,20 @@ class SignupViewController: UIViewController{
                     self.showError("Error creating user")
                 }
                 else {
-                    
+//
                     // User was created successfully, now store the first name and last name in the firestore Database
                     let db = Firestore.firestore()
-                    
+
                     var ref: DocumentReference? = nil
                     ref = db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email": email, "uid": result!.user.uid ]) { (error) in
-                        
+
                         if error != nil {
                             // Show error message
                             self.showError("Error saving user data")
                         }
                     }
-                    
-                    // Transition to the home screen
+//
+//                    // Transition to the home screen
                     self.transitionToHome()
                 }
                 
@@ -145,14 +169,14 @@ class SignupViewController: UIViewController{
             
             
         }
-    }
     
+                                                       }
     func showError(_ message:String) {
         
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    
+//    
     func transitionToHome() {
 
         let homeViewController = storyboard?.instantiateViewController(identifier: "home") as! HomeViewcontroller
