@@ -21,6 +21,7 @@
 		35C6D5B027E34D73005E8A06 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5AF27E34D73005E8A06 /* FirebaseFirestore */; };
 		35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B627E354A7005E8A06 /* SignupViewController.swift */; };
 		35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5BB27E834C6005E8A06 /* Utilities.swift */; };
+		35DF4C7927ED979D0039013D /* BWWalkthrough in Frameworks */ = {isa = PBXBuildFile; productRef = 35DF4C7827ED979D0039013D /* BWWalkthrough */; };
 		C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C127EADEF9003D844D /* HomeViewController.swift */; };
 		C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C727EAF1B5003D844D /* EntryViewController.swift */; };
 		C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C927EAF8E2003D844D /* NoteViewController.swift */; };
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DF4C7927ED979D0039013D /* BWWalkthrough in Frameworks */,
 				35C6D5A827E34D73005E8A06 /* FirebaseAnalytics in Frameworks */,
 				35C6D5AC27E34D73005E8A06 /* FirebaseAuth in Frameworks */,
 				35C6D5AE27E34D73005E8A06 /* FirebaseDatabase in Frameworks */,
@@ -149,6 +151,7 @@
 				35C6D5AB27E34D73005E8A06 /* FirebaseAuth */,
 				35C6D5AD27E34D73005E8A06 /* FirebaseDatabase */,
 				35C6D5AF27E34D73005E8A06 /* FirebaseFirestore */,
+				35DF4C7827ED979D0039013D /* BWWalkthrough */,
 			);
 			productName = ThinkNotes;
 			productReference = 35C6D58D27E3478F005E8A06 /* ThinkNotes.app */;
@@ -180,6 +183,7 @@
 			mainGroup = 35C6D58427E3478F005E8A06;
 			packageReferences = (
 				35C6D5A627E34D73005E8A06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				35DF4C7727ED979D0039013D /* XCRemoteSwiftPackageReference "BWWalkthrough" */,
 			);
 			productRefGroup = 35C6D58E27E3478F005E8A06 /* Products */;
 			projectDirPath = "";
@@ -446,6 +450,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		35DF4C7727ED979D0039013D /* XCRemoteSwiftPackageReference "BWWalkthrough" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ariok/BWWalkthrough";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -473,6 +485,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 35C6D5A627E34D73005E8A06 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		35DF4C7827ED979D0039013D /* BWWalkthrough */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35DF4C7727ED979D0039013D /* XCRemoteSwiftPackageReference "BWWalkthrough" */;
+			productName = BWWalkthrough;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAF-1N-gif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAF-1N-gif">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LD8-No-Br1">
-                                <rect key="frame" x="20" y="165" width="374" height="162"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="20" y="113" width="374" height="214"/>
+                                <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Hey People. Let's Explore the world of notes Together.
@@ -107,7 +107,7 @@ Login to continue.</string>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="LD8-No-Br1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Cbm-JC-TKC"/>
                             <constraint firstItem="7gl-Di-2mV" firstAttribute="top" secondItem="LD8-No-Br1" secondAttribute="bottom" constant="42" id="G9n-Fl-MJd"/>
@@ -198,7 +198,7 @@ Login to continue.</string>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kep-7w-9n5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="5tC-Re-Mup" firstAttribute="leading" secondItem="kep-7w-9n5" secondAttribute="leading" constant="30" id="CKF-78-Zme"/>
                             <constraint firstItem="kep-7w-9n5" firstAttribute="bottom" secondItem="5tC-Re-Mup" secondAttribute="bottom" constant="249.5" id="Nll-iD-q1A"/>
@@ -267,7 +267,7 @@ Login to continue.</string>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EVM-f9-GP8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="tXF-jr-nk9" secondAttribute="bottom" id="03T-UG-yID"/>
                             <constraint firstItem="s1f-mR-TqQ" firstAttribute="centerY" secondItem="DZh-9p-ijR" secondAttribute="centerY" id="EUD-BN-ZLj"/>
@@ -319,7 +319,7 @@ Login to continue.</string>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M7L-DQ-fFr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Igc-G0-OgE" firstAttribute="top" secondItem="Tpk-GC-dMJ" secondAttribute="bottom" constant="10" id="A4g-id-2CE"/>
                             <constraint firstItem="Tpk-GC-dMJ" firstAttribute="top" secondItem="M7L-DQ-fFr" secondAttribute="top" constant="10" id="DzF-hA-gka"/>
@@ -365,7 +365,7 @@ Login to continue.</string>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fzm-4B-7iM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="wCk-sU-8yd" firstAttribute="top" secondItem="Fzm-4B-7iM" secondAttribute="top" constant="10" id="HtU-jy-WZb"/>
                             <constraint firstItem="wCk-sU-8yd" firstAttribute="leading" secondItem="Fzm-4B-7iM" secondAttribute="leading" constant="10" id="OP9-0e-FMO"/>
@@ -383,7 +383,7 @@ Login to continue.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wA6-qU-5Pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4842.0289855072469" y="541.74107142857144"/>
+            <point key="canvasLocation" x="5201" y="528"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i8T-KS-WZQ">
