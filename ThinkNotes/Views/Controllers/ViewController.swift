@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
     //
-    var handle: AuthStateDidChangeListenerHandle?
+//    var handle: AuthStateDidChangeListenerHandle?
     @IBOutlet weak var EmailTextfield: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var errorlabel: UILabel!
@@ -29,27 +29,30 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        handle = Auth.auth().addStateDidChangeListener({ _, user in
-            if user == nil {
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-            else{
-                self.transitionToHome()
-//                self.performSegue(withIdentifier: "showw", sender: nil)
-                self.EmailTextfield.text = nil
-                self.passwordTextfield.text = nil
-            }
-        })
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        guard let handle = handle else {
-            return
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//        handle = Auth.auth().addStateDidChangeListener({ _, user in
+//            if user == nil {
+//                self.navigationController?.popToRootViewController(animated: true)
+//            }
+//            else{
+//                self.transitionToHome()
+////                self.performSegue(withIdentifier: "showw", sender: nil)
+//                self.EmailTextfield.text = nil
+//                self.passwordTextfield.text = nil
+//            }
+//        })
+        if let _ = Auth.auth().currentUser{
+            self.transitionToHome()
         }
-        Auth.auth().removeStateDidChangeListener(handle)
     }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+//        guard let handle = handle else {
+//            return
+//        }
+//        Auth.auth().removeStateDidChangeListener(handle)
+//    }
     func setUpElements(){
         Utilities.styleTextField(EmailTextfield)
         Utilities.styleTextField(passwordTextfield)
@@ -66,8 +69,9 @@ class ViewController: UIViewController {
         let password = passwordTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            
+      
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+           
             if error != nil {
                 // Couldn't sign in
                 self.errorlabel.text = error!.localizedDescription
@@ -79,8 +83,9 @@ class ViewController: UIViewController {
                 // Transition to the home screen
 //                self.transitionToHome()
 //            }
-        }
+            self.transitionToHome()
     
+    }
     }
     func transitionToHome() {
 

@@ -11,8 +11,8 @@ class EntryViewController: UIViewController{
 //    var delegate : AddDelegate?
     @IBOutlet weak var titleField: UITextField!
     
-    @IBOutlet weak var noteField: UITextView!
-    public var completion: ((String, String) -> Void)?
+//    @IBOutlet weak var noteField: UITextView!
+    public var completion: ((String) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         titleField.becomeFirstResponder()
@@ -20,8 +20,8 @@ class EntryViewController: UIViewController{
     }
 
     @objc func didTapSave() {
-        if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty {
-            completion?(text, noteField.text)
+        if let text = titleField.text, !text.isEmpty {
+            completion?(text)
 //            delegate?.updateTableView()
         }
     }

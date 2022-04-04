@@ -13,68 +13,109 @@ import FirebaseAuth
 class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
     
-    var user: User?
-   
-    let ref = Database.database().reference(withPath: "notes-items")
+    var user: User!
+    var ref : DatabaseReference!
+    private var databasehandle: DatabaseHandle!
+//
+//   let uuid = Auth.auth().currentUser
+//
+//    let ref = Database.database().reference(withPath: "notes-items")
 //    let ref = Database.database().reference().child("notes-items/\(uid)/title")
+//    let userId = Auth.auth().currentUser!.uid
+//    let usersRef = Database.database().reference(withPath: "current")
+//    var usersRefObservers: [DatabaseHandle] = []
     
-    
-    var refObservers: [DatabaseHandle] = []
-    var handle: AuthStateDidChangeListenerHandle?
-    var items: [Notes] = []
+//    var refObservers: [DatabaseHandle] = []
+//    var handle: AuthStateDidChangeListenerHandle?
+//    var items = [Notes]()
    
-   
+   var items = [Item]()
     
     @IBOutlet weak var noNOtes: UILabel!
     @IBOutlet weak var tblView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        user = Auth.auth().currentUser
+        ref = Database.database().reference()
+        startObservingDatabase()
+        
         self.tblView.delegate = self
         self.tblView.dataSource = self
         navigationItem.hidesBackButton  = true
 //        title = "ThinkNotes"
 //
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       
-       let completed = ref.observe(.value) { snapshot in
-//            print(snapshot.value as Any)
-         
-            var newItems: [Notes] = []
-            for child in snapshot.children {
-              if
-                let snapshot = child as? DataSnapshot,
-                let noteItem = Notes(snapshot: snapshot) {
-                newItems.append(noteItem)
-              }
+    func startObservingDatabase(){
+        databasehandle = ref.child("users/\(self.user.uid)/items").observe(.value, with: { (snapshot) in
+            print(snapshot.value as Any)
+            var newItems = [Item]()
+//            for child in snapshot.children {
+//                         if
+//                           let snapshot = child as? DataSnapshot,
+//                           let noteItem = Notes(snapshot: snapshot) {
+//                           newItems.append(noteItem)
+//                         }
+//            }
+            for itemSnapShot in snapshot.children {
+                let item = Item(snapshot: itemSnapShot as! DataSnapshot)
+                newItems.append(item)
+
             }
+            
             self.items = newItems
-//            print(newItems)
-////            DispatchQueue.main.async {
-           self.noNOtes.isHidden = true
-           self.tblView.isHidden=false
             self.tblView.reloadData()
-        }
-          
-       
-        refObservers.append(completed)
-//        self.tblView.reloadData()
-        handle = Auth.auth().addStateDidChangeListener{ _, user in
-            guard let user = user else {return}
-            self.user = User(authData: user)
-        }
+        })
+    }
+    deinit{
+        ref.child("users/\(self.user.uid)/items").removeObserver(withHandle: databasehandle)
     }
 
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//       let completed = ref.observe(.value) { snapshot in
+//            print(snapshot.value as Any)
+//
+//            var newItems: [Notes] = []
+//            for child in snapshot.children {
+//              if
+//                let snapshot = child as? DataSnapshot,
+//                let noteItem = Notes(snapshot: snapshot) {
+//                newItems.append(noteItem)
+//              }
+//            }
+//            self.items = newItems
+////            print(newItems)
+//////            DispatchQueue.main.async {
+////           self.noNOtes.isHidden = true
+//           self.tblView.isHidden=false
+//            self.tblView.reloadData()
+//        }
+//
+//
+//        refObservers.append(completed)
+////        self.tblView.reloadData()
+//        handle = Auth.auth().addStateDidChangeListener{ _, user in
+//            guard let user = user else {return}
+//            self.user = User(authData: user)
+//
+////            let currentUserRef = self.usersRef.child(user.uid)
+////            currentUserRef.setValue(user.email)
+////            currentUserRef.onDisconnectRemoveValue()
+//    }
+//    }
     
-    override func viewDidDisappear(_ animated: Bool) {
-      super.viewDidDisappear(true)
-        refObservers.forEach(ref.removeObserver(withHandle:))
-      refObservers = []
-        guard let handle = handle else { return }
-        Auth.auth().removeStateDidChangeListener(handle)
-
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//      super.viewDidDisappear(true)
+//        refObservers.forEach(ref.removeObserver(withHandle:))
+//      refObservers = []
+////        usersRefObservers.forEach(usersRef.removeObserver(withHandle:))
+////        usersRefObservers = []
+//        guard let handle = handle else { return }
+//        Auth.auth().removeStateDidChangeListener(handle)
+//
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -87,7 +128,7 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         let list = self.items[indexPath.row]
         
         cell.textLabel?.text = list.title
-        cell.detailTextLabel?.text = list.note
+//        cell.detailTextLabel?.text = list.note
         
         return cell
     }
@@ -102,8 +143,8 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = "Note"
-        vc.noteTitle = model.title
-        vc.note = model.note
+       vc.noteTitle = model.title!
+//       vc.note = model.note
         navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func newNOte(_ sender: Any) {
@@ -115,15 +156,16 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         vc.title = "New Note"
 //        vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = { noteTitle, note in
+        vc.completion = { noteTitle in
 //            self.navigationController?.popViewController(animated: true)
             
-            
-            let notesItem = Notes(title: noteTitle, note: note)
-            let notesItemRef = self.ref.child(noteTitle.lowercased())
+//            guard let user = Auth.auth().currentUser  else { return }
+//            let notesItem = Notes(title: noteTitle)
+//            let notesItemRef = self.ref.child("notes-items/\(user.uid)")
+//            let notesItemRef = self.ref.child(user.uid)
            
-            notesItemRef.setValue(notesItem.toAnyObject())
-        
+//            notesItemRef.setValue(notesItem.toAnyObject())
+            self.ref.child("users").child(self.user.uid).child("items").childByAutoId().child("title").setValue(noteTitle)
 
             self.navigationController?.popViewController(animated: true)
             self.noNOtes.isHidden = true
@@ -136,16 +178,16 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func signout(_ sender: Any) {
-        // 1
-        guard let user = Auth.auth().currentUser else { return }
-        let onlineRef = Database.database().reference(withPath: "notes-items\(user.uid)")
-        // 2
-        onlineRef.removeValue { error, _ in
-          // 3
-          if let error = error {
-            print("Removing online failed: \(error)")
-            return
-          }
+//        // 1
+//        guard let user = Auth.auth().currentUser  else { return }
+//        let onlineRef = Database.database().reference(withPath: "notes-items")
+//        // 2
+//        onlineRef.removeValue { error, _ in
+//          // 3
+//          if let error = error {
+//            print("Removing online failed: \(error)")
+//            return
+//          }
           // 4
           do {
             try Auth.auth().signOut()
@@ -171,7 +213,6 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
 //        
 //                                        
 //    }
-}
 
 
 
