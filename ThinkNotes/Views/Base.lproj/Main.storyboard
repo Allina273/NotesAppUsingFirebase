@@ -238,24 +238,24 @@ Login to continue.</string>
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="usl-K3-Yn8" detailTextLabel="lJq-CT-Xap" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="3JA-DV-LnM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemcell" textLabel="usl-K3-Yn8" detailTextLabel="vvd-Rn-IQv" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="3JA-DV-LnM">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3JA-DV-LnM" id="VLp-dP-L6C">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="usl-K3-Yn8">
-                                                    <rect key="frame" x="20" y="14" width="25" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="usl-K3-Yn8">
+                                                    <rect key="frame" x="20" y="-1" width="55.5" height="36"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lJq-CT-Xap">
-                                                    <rect key="frame" x="20" y="30.5" width="40.5" height="13.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vvd-Rn-IQv">
+                                                    <rect key="frame" x="20" y="35" width="76.5" height="27.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -296,54 +296,6 @@ Login to continue.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFJ-Rq-Ln4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4385.507246376812" y="-172.76785714285714"/>
-        </scene>
-        <!--ThinkNotes-->
-        <scene sceneID="sek-9p-2DA">
-            <objects>
-                <tableViewController id="bCf-nS-gZA" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="tmp-BW-Gb1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="crw-rc-fof" detailTextLabel="fb0-Kt-6g0" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="O9H-Pr-ebA">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O9H-Pr-ebA" id="bYl-w4-HeD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="crw-rc-fof">
-                                            <rect key="frame" x="20" y="14" width="25" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fb0-Kt-6g0">
-                                            <rect key="frame" x="20" y="30.5" width="40.5" height="13.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bCf-nS-gZA" id="pyT-hF-h8q"/>
-                            <outlet property="delegate" destination="bCf-nS-gZA" id="8oC-zd-mIs"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="ThinkNotes" id="G8L-5v-T6g">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="lcU-bE-kPC"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FcF-BE-9dA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5300" y="219.64285714285714"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="t9R-5A-TVz">
@@ -408,11 +360,11 @@ Login to continue.</string>
                                 <color key="textColor" red="0.096025955245628847" green="0.37985819968905288" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yva-BN-ET3">
-                                <rect key="frame" x="10" y="124" width="394" height="728"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yto-aZ-Fxd">
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" red="0.29224844150000001" green="0.59996970130000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -421,15 +373,15 @@ Login to continue.</string>
                         <constraints>
                             <constraint firstItem="wCk-sU-8yd" firstAttribute="top" secondItem="Fzm-4B-7iM" secondAttribute="top" constant="10" id="HtU-jy-WZb"/>
                             <constraint firstItem="wCk-sU-8yd" firstAttribute="leading" secondItem="Fzm-4B-7iM" secondAttribute="leading" constant="10" id="OP9-0e-FMO"/>
-                            <constraint firstItem="Fzm-4B-7iM" firstAttribute="trailing" secondItem="yva-BN-ET3" secondAttribute="trailing" constant="10" id="Rw0-SJ-amA"/>
-                            <constraint firstItem="yva-BN-ET3" firstAttribute="top" secondItem="wCk-sU-8yd" secondAttribute="bottom" constant="10" id="bEV-bq-WyC"/>
-                            <constraint firstItem="yva-BN-ET3" firstAttribute="leading" secondItem="Fzm-4B-7iM" secondAttribute="leading" constant="10" id="brr-lr-6g8"/>
+                            <constraint firstItem="Fzm-4B-7iM" firstAttribute="bottom" secondItem="yto-aZ-Fxd" secondAttribute="bottom" id="RKg-9r-a6c"/>
                             <constraint firstItem="Fzm-4B-7iM" firstAttribute="trailing" secondItem="wCk-sU-8yd" secondAttribute="trailing" constant="10" id="fXC-k6-ZUk"/>
-                            <constraint firstItem="Fzm-4B-7iM" firstAttribute="bottom" secondItem="yva-BN-ET3" secondAttribute="bottom" constant="10" id="xD2-RZ-qem"/>
+                            <constraint firstItem="Fzm-4B-7iM" firstAttribute="trailing" secondItem="yto-aZ-Fxd" secondAttribute="trailing" id="hYl-vx-t6O"/>
+                            <constraint firstItem="yto-aZ-Fxd" firstAttribute="top" secondItem="wCk-sU-8yd" secondAttribute="bottom" id="jV3-I7-IUO"/>
+                            <constraint firstItem="yto-aZ-Fxd" firstAttribute="leading" secondItem="Fzm-4B-7iM" secondAttribute="leading" id="xbS-st-qzX"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="noteLabel" destination="yva-BN-ET3" id="ze5-tf-xRK"/>
+                        <outlet property="noteLabel" destination="yto-aZ-Fxd" id="4uz-sY-M9Y"/>
                         <outlet property="titleLabel" destination="wCk-sU-8yd" id="xYq-pe-yTx"/>
                     </connections>
                 </viewController>
@@ -485,6 +437,9 @@ Login to continue.</string>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

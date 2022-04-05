@@ -12,7 +12,7 @@ import Firebase
 
 class SignupViewController: UIViewController{
     
-    var handle: AuthStateDidChangeListenerHandle?
+//    var handle: AuthStateDidChangeListenerHandle?
     @IBOutlet weak var Firstname: UITextField!
     @IBOutlet weak var Lastname: UITextField!
     @IBOutlet weak var Password: UITextField!
@@ -27,30 +27,7 @@ class SignupViewController: UIViewController{
         super.viewDidLoad()
         setUpElements()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-//        handle = Auth.auth().addStateDidChangeListener({ _, user in
-//            if user == nil {
-//                self.navigationController?.popToRootViewController(animated: true)
-//            }
-//            else{
-////                self.performSegue(withIdentifier: "showw", sender: nil)
-//                self.transitionToHome()
-//                self.Email.text = nil
-//                self.Password.text = nil
-//
-//            } })
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        guard let handle = handle else {
-            return
-        }
-        Auth.auth().removeStateDidChangeListener(handle)
-    }
-    
+
     func setUpElements(){
         
 //        hide error label when signing up
@@ -71,8 +48,9 @@ class SignupViewController: UIViewController{
     func validateFields() -> String? {
         
         // Check that all fields are filled in
-        if Firstname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            Lastname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//        if Firstname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+//            Lastname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        if
             Email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             Password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             RePassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
@@ -131,8 +109,8 @@ class SignupViewController: UIViewController{
         else {
             
             // Create cleaned versions of the data
-            let firstName = Firstname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let lastName = Lastname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//            let firstName = Firstname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//            let lastName = Lastname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = Email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             _ = RePassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -149,18 +127,19 @@ class SignupViewController: UIViewController{
                 else {
 //
                     // User was created successfully, now store the first name and last name in the firestore Database
-                    let db = Firestore.firestore()
-
-                    var ref: DocumentReference? = nil
-                    ref = db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "email": email, "uid": result!.user.uid ]) { (error) in
-
-                        if error != nil {
-                            // Show error message
-                            self.showError("Error saving user data")
-                        }
-                    }
+//                    let db = Firestore.firestore()
 //
-//                    // Transition to the home screen
+//                    var ref: DocumentReference?
+//                    ref = db.collection("notes-items").addDocument(data: ["firstname":firstName, "lastname":lastName, "email": email, "uid": result!.user.uid ]) { (error) in
+//
+//                        if error != nil {
+//                            // Show error message
+//                            self.showError("Error saving user data")
+//                        }
+//                    }
+////
+////                    // Transition to the home screen
+//                    let email = Auth.auth().currentUser?.email
                     self.transitionToHome()
                 }
                 
