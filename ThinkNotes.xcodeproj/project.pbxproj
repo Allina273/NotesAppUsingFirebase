@@ -22,7 +22,15 @@
 		35C6D5B027E34D73005E8A06 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 35C6D5AF27E34D73005E8A06 /* FirebaseFirestore */; };
 		35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5B627E354A7005E8A06 /* SignupViewController.swift */; };
 		35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5BB27E834C6005E8A06 /* Utilities.swift */; };
+<<<<<<< HEAD
 		35DF4C7927ED979D0039013D /* BWWalkthrough in Frameworks */ = {isa = PBXBuildFile; productRef = 35DF4C7827ED979D0039013D /* BWWalkthrough */; };
+=======
+<<<<<<< HEAD
+		C97D3DCF27FAF18800BDFDCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C97D3DCE27FAF18700BDFDCB /* GoogleService-Info.plist */; };
+=======
+		35DF4C7927ED979D0039013D /* BWWalkthrough in Frameworks */ = {isa = PBXBuildFile; productRef = 35DF4C7827ED979D0039013D /* BWWalkthrough */; };
+>>>>>>> b780b70 (UI view changed)
+>>>>>>> 241ee56 (Errors)
 		C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C127EADEF9003D844D /* HomeViewController.swift */; };
 		C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C727EAF1B5003D844D /* EntryViewController.swift */; };
 		C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C927EAF8E2003D844D /* NoteViewController.swift */; };

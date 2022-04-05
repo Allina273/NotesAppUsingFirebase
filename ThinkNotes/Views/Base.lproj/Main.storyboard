@@ -18,7 +18,15 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LD8-No-Br1">
                                 <rect key="frame" x="20" y="113" width="374" height="214"/>
+<<<<<<< HEAD
                                 <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+=======
+<<<<<<< HEAD
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+=======
+                                <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+>>>>>>> b780b70 (UI view changed)
+>>>>>>> 241ee56 (Errors)
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Hey People. Let's Explore the world of notes Together.
@@ -387,7 +395,15 @@ Login to continue.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wA6-qU-5Pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="5201" y="528"/>
+=======
+<<<<<<< HEAD
+            <point key="canvasLocation" x="5744.9275362318849" y="-50.223214285714285"/>
+=======
+            <point key="canvasLocation" x="5201" y="528"/>
+>>>>>>> b780b70 (UI view changed)
+>>>>>>> 241ee56 (Errors)
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i8T-KS-WZQ">
