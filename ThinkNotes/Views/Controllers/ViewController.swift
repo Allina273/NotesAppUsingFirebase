@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
         errorlabel.alpha = 0
+//        passwordTextfield.setup()
         
         
         // Do any additional setup after loading the view.
