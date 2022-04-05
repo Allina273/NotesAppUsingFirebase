@@ -27,30 +27,7 @@ class SignupViewController: UIViewController{
         super.viewDidLoad()
         setUpElements()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-//        handle = Auth.auth().addStateDidChangeListener({ _, user in
-//            if user == nil {
-//                self.navigationController?.popToRootViewController(animated: true)
-//            }
-//            else{
-////                self.performSegue(withIdentifier: "showw", sender: nil)
-//                self.transitionToHome()
-//                self.Email.text = nil
-//                self.Password.text = nil
-//
-//            } })
-    }
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-//        guard let handle = handle else {
-//            return
-//        }
-//        Auth.auth().removeStateDidChangeListener(handle)
-//    }
-    
+
     func setUpElements(){
         
 //        hide error label when signing up

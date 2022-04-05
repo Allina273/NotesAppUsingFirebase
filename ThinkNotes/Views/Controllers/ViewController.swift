@@ -9,8 +9,7 @@ import UIKit
 import FirebaseAuth
 
 class ViewController: UIViewController {
-    //
-//    var handle: AuthStateDidChangeListenerHandle?
+ 
     @IBOutlet weak var EmailTextfield: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var errorlabel: UILabel!
@@ -29,30 +28,13 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-//        handle = Auth.auth().addStateDidChangeListener({ _, user in
-//            if user == nil {
-//                self.navigationController?.popToRootViewController(animated: true)
-//            }
-//            else{
-//                self.transitionToHome()
-////                self.performSegue(withIdentifier: "showw", sender: nil)
-//                self.EmailTextfield.text = nil
-//                self.passwordTextfield.text = nil
-//            }
-//        })
+
         if let _ = Auth.auth().currentUser{
+
             self.transitionToHome()
         }
     }
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-//        guard let handle = handle else {
-//            return
-//        }
-//        Auth.auth().removeStateDidChangeListener(handle)
-//    }
+
     func setUpElements(){
         Utilities.styleTextField(EmailTextfield)
         Utilities.styleTextField(passwordTextfield)
