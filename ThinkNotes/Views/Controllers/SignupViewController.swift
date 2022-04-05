@@ -65,20 +65,36 @@ class SignupViewController: UIViewController{
             return "Please fill in all fields."
         }
         // Check if the password is secure
-        let correctPassword = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if isPasswordValid(correctPassword) == false {
-            // Password isn't secure enough
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        }
-        
-        //  Check if the password and re type password matches
-        if correctPassword == RePassword.text {
+                let correctPassword = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                let rePassword = RePassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                if isPasswordValid(correctPassword) == false {
+                    // Password isn't secure enough
+                    return "Please make sure your password is at least 8 characters, contains a special character and a number."
+                    
+                } else if passwordSame(correctPassword: correctPassword, RePassword: rePassword) == false {
+                    return "Password doesnt match"
+                }
+                else{
+                    passwordSame(correctPassword: correctPassword, RePassword: rePassword) == true
+                }
+                return nil
+                }
+               
+            
+                
+                //  Check if the password and re type password matches
+                func passwordSame(correctPassword: String, RePassword: String) -> Bool{
+                if correctPassword == RePassword{
+                    return true
 
-            print("registertologin")
+                     } else {
 
-             } else {
+                       print("Password Does Not Match Confirm Password")
+                         return false
+                     }
 
+<<<<<<< HEAD
                print("Password Does Not Match Confirm Password")}
 
               
@@ -94,6 +110,11 @@ class SignupViewController: UIViewController{
 //        }
 //        iconClick = !iconClick
 //    }
+=======
+            }
+                
+    
+>>>>>>> Raj/myBranch
     
     
     

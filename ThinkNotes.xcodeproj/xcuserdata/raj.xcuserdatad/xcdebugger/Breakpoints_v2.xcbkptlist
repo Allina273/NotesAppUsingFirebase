@@ -3,4 +3,28 @@
    uuid = "AE37EF14-39BC-4A33-A0A7-6976C5D3FDB7"
    type = "1"
    version = "2.0">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31E05C19-D3BF-4013-87AB-BCA719A2B154"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThinkNotes/Views/Controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loginTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+>>>>>>> b780b70 (UI view changed)
+>>>>>>> Raj/myBranch
 </Bucket>

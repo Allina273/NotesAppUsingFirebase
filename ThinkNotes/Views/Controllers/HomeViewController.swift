@@ -11,6 +11,11 @@ import Firebase
 import FirebaseAuth
 import SwiftUI
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Raj/myBranch
 class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
 
@@ -22,10 +27,15 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
     var items: [Item] = []
 
     
+<<<<<<< HEAD
+=======
+>>>>>>> ba17dcd (Fixed email and password visibility after signout)
+>>>>>>> Raj/myBranch
     @IBOutlet weak var noNOtes: UILabel!
     @IBOutlet weak var tblView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         user = Auth.auth().currentUser
         ref = Database.database().reference()
@@ -37,6 +47,61 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     
 
+=======
+<<<<<<< HEAD
+        tblView.delegate = self
+        tblView.dataSource = self
+        navigationItem.hidesBackButton = true
+        title = "ThinkNotes"
+    }
+    @IBAction func newNote() {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController else {
+            return
+        }
+        vc.title = "New Note"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.completion = { noteTitle, note in
+            self.navigationController?.popViewController(animated: true)
+            self.models.append((title: noteTitle, note: note))
+            self.noNOtes.isHidden = true
+            self.tblView.isHidden = false
+
+=======
+        
+        user = Auth.auth().currentUser
+        ref = Database.database().reference()
+
+        
+        self.tblView.delegate = self
+        self.tblView.dataSource = self
+        navigationItem.hidesBackButton  = true
+
+    
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startObservingDatabase()
+    }
+    func startObservingDatabase(){
+        databasehandle = ref.child("users/\(self.user.uid)/items").observe(.value, with: { (snapshot) in
+           
+            var newItems : [Item] = []
+//
+            for itemSnapShot in snapshot.children {
+                let item = Item(snapshot: itemSnapShot as! DataSnapshot)
+                newItems.append(item)
+//
+                self.tblView.isHidden = false
+                self.noNOtes.isHidden = true
+               
+            }
+>>>>>>> ba17dcd (Fixed email and password visibility after signout)
+          
+            self.tblView.reloadData()
+        }
+        navigationController?.pushViewController(vc, animated: true)
+>>>>>>> Raj/myBranch
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -152,3 +217,12 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
           }
         }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> ba17dcd (Fixed email and password visibility after signout)
+>>>>>>> Raj/myBranch
