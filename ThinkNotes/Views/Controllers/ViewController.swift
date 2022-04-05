@@ -29,7 +29,9 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        self.EmailTextfield.text = nil
+        self.passwordTextfield.text = nil
+        EmailTextfield.becomeFirstResponder()
         if let _ = Auth.auth().currentUser{
 
             self.transitionToHome()
