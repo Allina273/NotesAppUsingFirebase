@@ -9,14 +9,18 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
+import SwiftUI
 
 class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
+
 
     // MARK: Properties
     var user: User!
     var ref : DatabaseReference!
     private var databasehandle: DatabaseHandle!
     var items: [Item] = []
+//    public var completionHandler: ((String,String) -> Void)?
     
     @IBOutlet weak var noNOtes: UILabel!
     @IBOutlet weak var tblView: UITableView!
@@ -25,7 +29,7 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         user = Auth.auth().currentUser
         ref = Database.database().reference()
-        startObservingDatabase()
+//        startObservingDatabase()
         
         self.tblView.delegate = self
         self.tblView.dataSource = self
@@ -34,6 +38,10 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
     
 //        title = "ThinkNotes"
 //
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startObservingDatabase()
     }
     func startObservingDatabase(){
         databasehandle = ref.child("users/\(self.user.uid)/items").observe(.value, with: { (snapshot) in
@@ -85,7 +93,7 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         if editingStyle == .delete {
                     let item = items[indexPath.row]
                     item.ref?.removeValue()
-                }
+        }
     }
     
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -93,7 +101,7 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         let model = items[indexPath.row]
 
-        // Show note controller
+//        // Show note controller
         guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NoteViewController else {
             return
         }
@@ -101,8 +109,19 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         vc.title = "Note"
        vc.noteTitle = model.title!
        vc.note = model.note!
+       
         navigationController?.pushViewController(vc, animated: true)
-    }
+       
+//       it catches the update data
+       
+       vc.completionHandler = { noteTitlee, notee in
+
+           let updateItem = Item(title: noteTitlee,note:notee)
+           model.ref?.updateChildValues(updateItem.toAnyObject() as! [AnyHashable : Any])
+           
+           self.navigationController?.popViewController(animated: true)
+       }
+   }
     
     // MARK: Add Item
     @IBAction func newNOte(_ sender: Any) {
@@ -133,4 +152,71 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
             print("Auth sign out failed: \(error)")
           }
         }
-    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//       guard let key = ref.child("users").childByAutoId().key else { return }
+//
+//       let updateItem = Item(title: model.title ?? "", note:model.note ?? "")
+//
+//       let childUpdates = ["/users/\(key)": updateItem.toAnyObject(),
+//                           "/items/\(user.uid)/\(key)/": updateItem.toAnyObject()]
+//       ref.updateChildValues(childUpdates)
+
+
+//       let alertController = UIAlertController(title: model.title, message: "Update the note", preferredStyle: .alert)
+//       let updateAction = UIAlertAction(title: "Update", style: .default){
+//           (_) in
+//           let titlee = model.title
+//           let notee = alertController.textFields?[0].text
+
+//           self.completionHandler = { titlee, notee in
+//       let updateItem = Item(title: model.title!,note:model.note!)
+
+//            ref.child("users/\(self.user.uid)/items").setValue(model)
+//           self.ref.child("users").child(self.user.uid).child("items").child() updateChildValues(c)
+//           }
+//
+//           model.ref?.updateChildValues(updateItem.toAnyObject() as! [AnyHashable : Any])
+
+       
+    
+//       alertController.addTextField{(textField) in
+//           textField.text = model.note}
+//           alertController.addAction(updateAction)
+//       present(alertController, animated: true, completion: nil)
+   
+//    func updateNotes(title: String, note: String){
+//        let model = [
+//            "title": title,
+//            "note": note]
+//       completionHandler = { noteTitle, note in
+//    let updateItem = Item(title: noteTitle,note:note)
