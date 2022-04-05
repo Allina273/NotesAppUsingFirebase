@@ -23,9 +23,15 @@ class SignupViewController: UIViewController{
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var SignupButton: UIButton!
     
+//    var iconClick = true
+//    let passwordTextField = PasswordTextField(frame: CGRect(x: 0, y: 0, width: 400, height: 50))
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
+//        Password.setup()
+//        let passwordTextField = PasswordTextField(frame: CGRect(x: 0, y: 0, width: 400, height: 50))
+//        view.addSubview(passwordTextField)
+      
     }
 
     func setUpElements(){
@@ -80,12 +86,16 @@ class SignupViewController: UIViewController{
         return nil
     }
 //    @IBAction func eyeButtonAction(_: Any) {
-//        if passwordTextField.isSecureTextEntry == false {
-//            passwordTextField.isSecureTextEntry = true
+//        if (iconClick == true) {
+//            Password.isSecureTextEntry == false
+//
 //        } else {
-//            passwordTextField.isSecureTextEntry = false
+//            Password.isSecureTextEntry = true
 //        }
+//        iconClick = !iconClick
 //    }
+    
+    
     
         
     //    for password Validation
@@ -164,6 +174,7 @@ class SignupViewController: UIViewController{
         self.view.window?.makeKeyAndVisible()
 
     }
+
     
 }
 
