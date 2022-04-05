@@ -19,6 +19,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LD8-No-Br1">
                                 <rect key="frame" x="20" y="113" width="374" height="214"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 =======
 <<<<<<< HEAD
@@ -27,6 +28,9 @@
                                 <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 >>>>>>> b780b70 (UI view changed)
 >>>>>>> 241ee56 (Errors)
+=======
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+>>>>>>> 627dc76 (added password and match password functionality)
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Hey People. Let's Explore the world of notes Together.
@@ -115,7 +119,7 @@ Login to continue.</string>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LD8-No-Br1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Cbm-JC-TKC"/>
                             <constraint firstItem="7gl-Di-2mV" firstAttribute="top" secondItem="LD8-No-Br1" secondAttribute="bottom" constant="42" id="G9n-Fl-MJd"/>
@@ -206,7 +210,7 @@ Login to continue.</string>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kep-7w-9n5"/>
-                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5tC-Re-Mup" firstAttribute="leading" secondItem="kep-7w-9n5" secondAttribute="leading" constant="30" id="CKF-78-Zme"/>
                             <constraint firstItem="kep-7w-9n5" firstAttribute="bottom" secondItem="5tC-Re-Mup" secondAttribute="bottom" constant="249.5" id="Nll-iD-q1A"/>
@@ -275,7 +279,7 @@ Login to continue.</string>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EVM-f9-GP8"/>
-                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="tXF-jr-nk9" secondAttribute="bottom" id="03T-UG-yID"/>
                             <constraint firstItem="s1f-mR-TqQ" firstAttribute="centerY" secondItem="DZh-9p-ijR" secondAttribute="centerY" id="EUD-BN-ZLj"/>
@@ -325,13 +329,9 @@ Login to continue.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ejx-DH-ctx">
-                                <rect key="frame" x="61" y="254" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M7L-DQ-fFr"/>
-                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Igc-G0-OgE" firstAttribute="top" secondItem="Tpk-GC-dMJ" secondAttribute="bottom" constant="10" id="A4g-id-2CE"/>
                             <constraint firstItem="Tpk-GC-dMJ" firstAttribute="top" secondItem="M7L-DQ-fFr" secondAttribute="top" constant="10" id="DzF-hA-gka"/>
@@ -377,7 +377,7 @@ Login to continue.</string>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fzm-4B-7iM"/>
-                        <color key="backgroundColor" red="0.86078917980000003" green="0.71795171739999997" blue="0.70074939270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wCk-sU-8yd" firstAttribute="top" secondItem="Fzm-4B-7iM" secondAttribute="top" constant="10" id="HtU-jy-WZb"/>
                             <constraint firstItem="wCk-sU-8yd" firstAttribute="leading" secondItem="Fzm-4B-7iM" secondAttribute="leading" constant="10" id="OP9-0e-FMO"/>
@@ -396,6 +396,7 @@ Login to continue.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wA6-qU-5Pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <point key="canvasLocation" x="5201" y="528"/>
 =======
 <<<<<<< HEAD
@@ -404,6 +405,9 @@ Login to continue.</string>
             <point key="canvasLocation" x="5201" y="528"/>
 >>>>>>> b780b70 (UI view changed)
 >>>>>>> 241ee56 (Errors)
+=======
+            <point key="canvasLocation" x="5744.9275362318849" y="-50.223214285714285"/>
+>>>>>>> 627dc76 (added password and match password functionality)
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i8T-KS-WZQ">
@@ -458,6 +462,12 @@ Login to continue.</string>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
