@@ -17,10 +17,10 @@ struct Item{
         ref = snapshot.ref
 
         let data = snapshot.value as? [String:AnyObject]
-        title = data!["title"] as? String
+        title = data?["title"] as? String
         
 
-        note = data!["note"] as? String
+        note = data?["note"] as? String
     }
     
     // MARK: Initialize with Raw Data
