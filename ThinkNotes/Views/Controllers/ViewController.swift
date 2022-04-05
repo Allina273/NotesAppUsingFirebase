@@ -27,6 +27,20 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+<<<<<<< HEAD
+=======
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.EmailTextfield.text = nil
+        self.passwordTextfield.text = nil
+        EmailTextfield.becomeFirstResponder()
+        if let _ = Auth.auth().currentUser{
+
+            self.transitionToHome()
+        }
+    }
+
+>>>>>>> ba17dcd (Fixed email and password visibility after signout)
     func setUpElements(){
         Utilities.styleTextField(EmailTextfield)
         Utilities.styleTextField(passwordTextfield)

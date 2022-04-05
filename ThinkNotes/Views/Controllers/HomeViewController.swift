@@ -9,11 +9,26 @@ import Foundation
 import UIKit
 class HomeViewcontroller: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+<<<<<<< HEAD
+=======
+class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
+
+
+    // MARK: Properties
+    var user: User!
+    var ref : DatabaseReference!
+    private var databasehandle: DatabaseHandle!
+    var items: [Item] = []
+
+    
+>>>>>>> ba17dcd (Fixed email and password visibility after signout)
     @IBOutlet weak var noNOtes: UILabel!
     @IBOutlet weak var tblView: UITableView!
     var models: [(title: String, note: String)] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         tblView.delegate = self
         tblView.dataSource = self
         navigationItem.hidesBackButton = true
@@ -31,6 +46,37 @@ class HomeViewcontroller: UIViewController, UITableViewDelegate, UITableViewData
             self.noNOtes.isHidden = true
             self.tblView.isHidden = false
 
+=======
+        
+        user = Auth.auth().currentUser
+        ref = Database.database().reference()
+
+        
+        self.tblView.delegate = self
+        self.tblView.dataSource = self
+        navigationItem.hidesBackButton  = true
+
+    
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startObservingDatabase()
+    }
+    func startObservingDatabase(){
+        databasehandle = ref.child("users/\(self.user.uid)/items").observe(.value, with: { (snapshot) in
+           
+            var newItems : [Item] = []
+//
+            for itemSnapShot in snapshot.children {
+                let item = Item(snapshot: itemSnapShot as! DataSnapshot)
+                newItems.append(item)
+//
+                self.tblView.isHidden = false
+                self.noNOtes.isHidden = true
+               
+            }
+>>>>>>> ba17dcd (Fixed email and password visibility after signout)
           
             self.tblView.reloadData()
         }
@@ -77,6 +123,9 @@ class HomeViewcontroller: UIViewController, UITableViewDelegate, UITableViewData
 //                                        
 //    }
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> ba17dcd (Fixed email and password visibility after signout)
