@@ -12,12 +12,10 @@ import FirebaseAuth
 
 class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
-    
+    // MARK: Properties
     var user: User!
     var ref : DatabaseReference!
     private var databasehandle: DatabaseHandle!
-
-   
     var items: [Item] = []
     
     @IBOutlet weak var noNOtes: UILabel!
@@ -65,10 +63,12 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         ref.child("users/\(self.user.uid)/items").removeObserver(withHandle: databasehandle)
     }
 
-
+    // MARK: UITableView Delegate methods
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -80,6 +80,14 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+                    let item = items[indexPath.row]
+                    item.ref?.removeValue()
+                }
+    }
+    
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
@@ -95,6 +103,8 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
        vc.note = model.note!
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    // MARK: Add Item
     @IBAction func newNOte(_ sender: Any) {
  
         guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController else {
@@ -123,18 +133,4 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
             print("Auth sign out failed: \(error)")
           }
         }
-
     }
-
-//
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let deleteAction = UIContextualAction(style: .normal, title: "Delete",handler: { ( UIContextualAction, UIView, success:(Bool) -> Void) in
-//            success(true)
-//        })
-//        deleteAction.backgroundColor = .red
-//        return UISwipeActionsConfiguration(actions: [deleteAction])
-//        
-//        
-//                                        
-//    }
-
