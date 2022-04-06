@@ -16,7 +16,7 @@ class NoteViewController: UIViewController {
     var ref : DatabaseReference!
     private var databasehandle: DatabaseHandle!
     var item: [Item] = []
-    public var completionHandler: ((String,String) -> Void)?
+    public var completionHandler: ((String,String,Bool) -> Void)?
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -36,7 +36,7 @@ class NoteViewController: UIViewController {
 
     @objc func didTapSave() {
         if let text = titleLabel.text, !text.isEmpty ,!noteLabel.text.isEmpty{
-            completionHandler?(text, noteLabel.text)
+            completionHandler?(text, noteLabel.text, false)
             
         }
     }
