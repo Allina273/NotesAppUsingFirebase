@@ -27,11 +27,7 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> Raj/myBranch
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.EmailTextfield.text = nil
@@ -43,10 +39,7 @@ class ViewController: UIViewController {
         }
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> ba17dcd (Fixed email and password visibility after signout)
->>>>>>> Raj/myBranch
+
     func setUpElements(){
         Utilities.styleTextField(EmailTextfield)
         Utilities.styleTextField(passwordTextfield)

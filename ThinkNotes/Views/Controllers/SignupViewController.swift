@@ -79,8 +79,8 @@ class SignupViewController: UIViewController{
                     passwordSame(correctPassword: correctPassword, RePassword: rePassword) == true
                 }
                 return nil
-                }
-               
+                
+    }
             
                 
                 //  Check if the password and re type password matches
@@ -94,39 +94,29 @@ class SignupViewController: UIViewController{
                          return false
                      }
 
-<<<<<<< HEAD
-               print("Password Does Not Match Confirm Password")}
 
-              
         
-        return nil
+      
     }
-//    @IBAction func eyeButtonAction(_: Any) {
-//        if (iconClick == true) {
-//            Password.isSecureTextEntry == false
-//
-//        } else {
-//            Password.isSecureTextEntry = true
-//        }
-//        iconClick = !iconClick
-//    }
-=======
-            }
+//    for password Validation
+    
+    func isPasswordValid(_ password : String) -> Bool {
+        
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        return passwordTest.evaluate(with: password)
+    }
+
+
+
+            
                 
     
->>>>>>> Raj/myBranch
+
     
     
     
         
-    //    for password Validation
-        
-        func isPasswordValid(_ password : String) -> Bool {
-            
-            let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-            return passwordTest.evaluate(with: password)
-        }
-    
+   
     
     @IBAction func signupTapped(_ sender: Any) {
         // Validate the fields
