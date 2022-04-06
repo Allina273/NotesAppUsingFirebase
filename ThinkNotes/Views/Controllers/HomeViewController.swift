@@ -36,12 +36,8 @@ class HomeViewcontroller: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.tblView.delegate = self
         self.tblView.dataSource = self
         navigationItem.hidesBackButton  = true
-
-    
-
-
-        
-        title = "ThinkNotes"
+//        title = "ThinkNotes"
+//    
     }
     
     
