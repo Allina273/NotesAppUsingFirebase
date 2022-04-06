@@ -12,7 +12,7 @@ class EntryViewController: UIViewController{
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var noteField: UITextView!
-    public var completion: ((String,String) -> Void)?
+    public var completion: ((String,String, Bool) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         titleField.becomeFirstResponder()
@@ -21,7 +21,7 @@ class EntryViewController: UIViewController{
 
     @objc func didTapSave() {
         if let text = titleField.text, !text.isEmpty ,!noteField.text.isEmpty{
-            completion?(text, noteField.text)
+            completion?(text, noteField.text, false)
         }
     }
 }

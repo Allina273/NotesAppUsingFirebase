@@ -11,6 +11,7 @@ struct Item{
     var ref: DatabaseReference?
     var title: String?
     var note: String?
+    var completed: Bool?
     
     // MARK: Initialize with Firebase DataSnapshot
     init (snapshot: DataSnapshot) {
@@ -21,20 +22,24 @@ struct Item{
         
 
         note = data?["note"] as? String
+        
+        completed = data?["completed"] as? Bool
     }
     
     // MARK: Initialize with Raw Data
-    init(title:String,note:String){
+    init(title:String,note:String,completed : Bool){
         ref = nil
         self.title = title
         self.note = note
+        self.completed = completed
     }
 
    // MARK: Convert Item to AnyObject
     func toAnyObject() -> Any {
       return [
         "title": title,
-        "note": note
+        "note": note,
+        "completed": completed
 
       ]
     }
