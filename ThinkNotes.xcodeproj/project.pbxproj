@@ -23,6 +23,9 @@
 		35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C6D5BB27E834C6005E8A06 /* Utilities.swift */; };
 		35DF4C7927ED979D0039013D /* BWWalkthrough in Frameworks */ = {isa = PBXBuildFile; productRef = 35DF4C7827ED979D0039013D /* BWWalkthrough */; };
 		C97D3DCF27FAF18800BDFDCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C97D3DCE27FAF18700BDFDCB /* GoogleService-Info.plist */; };
+		C9A2DA1A28040227001F764E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2DA1928040227001F764E /* HomeViewModel.swift */; };
+		C9A2DA1C28045401001F764E /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2DA1B28045401001F764E /* SignUpModel.swift */; };
+		C9A2DA1E28053843001F764E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2DA1D28053843001F764E /* LoginViewModel.swift */; };
 		C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C127EADEF9003D844D /* HomeViewController.swift */; };
 		C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C727EAF1B5003D844D /* EntryViewController.swift */; };
 		C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C675C927EAF8E2003D844D /* NoteViewController.swift */; };
@@ -42,6 +45,9 @@
 		35C6D5B627E354A7005E8A06 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		35C6D5BB27E834C6005E8A06 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C97D3DCE27FAF18700BDFDCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9A2DA1928040227001F764E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C9A2DA1B28045401001F764E /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		C9A2DA1D28053843001F764E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C9C675C127EADEF9003D844D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C9C675C727EAF1B5003D844D /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		C9C675C927EAF8E2003D844D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				C9DA0BBC27EC8482001E5118 /* Item.swift */,
+				C9A2DA1D28053843001F764E /* LoginViewModel.swift */,
+				C9A2DA1928040227001F764E /* HomeViewModel.swift */,
+				C9A2DA1B28045401001F764E /* SignUpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,11 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3510ECFB27FC510B00692FE0 /* PasswordTextField.swift in Sources */,
+				C9A2DA1A28040227001F764E /* HomeViewModel.swift in Sources */,
 				35C6D5BC27E834C6005E8A06 /* Utilities.swift in Sources */,
+				C9A2DA1C28045401001F764E /* SignUpModel.swift in Sources */,
 				C9C675C827EAF1B5003D844D /* EntryViewController.swift in Sources */,
 				35C6D59527E3478F005E8A06 /* ViewController.swift in Sources */,
 				C9C675CA27EAF8E2003D844D /* NoteViewController.swift in Sources */,
 				35C6D59127E3478F005E8A06 /* AppDelegate.swift in Sources */,
+				C9A2DA1E28053843001F764E /* LoginViewModel.swift in Sources */,
 				C9DA0BBD27EC8482001E5118 /* Item.swift in Sources */,
 				35C6D5B727E354A7005E8A06 /* SignupViewController.swift in Sources */,
 				C9C675C227EADEF9003D844D /* HomeViewController.swift in Sources */,

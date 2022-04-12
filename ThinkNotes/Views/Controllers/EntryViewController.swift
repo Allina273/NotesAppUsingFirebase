@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 class EntryViewController: UIViewController{
-
+    
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var noteField: UITextView!
@@ -18,10 +18,11 @@ class EntryViewController: UIViewController{
         titleField.becomeFirstResponder()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
     }
-
+    
     @objc func didTapSave() {
         if let text = titleField.text, !text.isEmpty ,!noteField.text.isEmpty{
             completion?(text, noteField.text, false)
         }
+        self.navigationController?.popViewController(animated: true)
     }
 }
