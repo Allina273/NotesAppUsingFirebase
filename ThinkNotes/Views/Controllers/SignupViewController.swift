@@ -10,7 +10,7 @@ import UIKit
 
 class SignupViewController: UIViewController {
     
-    private var viewModel = SignUpModel()
+    private var viewModel = SignUpViewModel()
     
     @IBOutlet weak var Firstname: UITextField!
     @IBOutlet weak var Lastname: UITextField!

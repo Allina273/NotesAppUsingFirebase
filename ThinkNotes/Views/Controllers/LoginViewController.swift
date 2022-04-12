@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
  
     @IBOutlet weak var EmailTextfield: UITextField!
     @IBOutlet weak var signupButton: UIButton!
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     }
 
-extension ViewController:LoginDelegate{
+extension LoginViewController:LoginDelegate{
     func ShowError(_ message: String) {
         self.errorlabel.text = message
         self.errorlabel.alpha = 1

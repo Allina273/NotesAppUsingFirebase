@@ -15,7 +15,7 @@ protocol SignUpDelegate: AnyObject{
     
 }
 
-class SignUpModel{
+class SignUpViewModel{
     var delegate:SignUpDelegate!
     
     func validatefields(_ Email:String,_ Password:String,_ RePassword:String) -> String? {
