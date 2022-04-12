@@ -8,46 +8,42 @@
 import UIKit
 
 class PasswordTextField: UITextField {
-    
-    
-    
-    
 
     override init(frame: CGRect) {
-            super.init(frame: frame)
-            setup()
-        }
-
-        required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-            setup()
-        }
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        self.isSecureTextEntry = true
         
-         func setup() {
-            self.isSecureTextEntry = true
-            
-            //show/hide button
-             let button = UIButton(type: .custom)
-             button.setImage(UIImage(systemName: "eye"), for: .selected)
-             button.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
-
-             button.frame = CGRect(x: 0, y: 0, width: -12, height: 0)
-             button.addTarget(self, action: #selector(showHidePassword(_:)), for: .touchUpInside)
-             button.tintColor = UIColor.init(red: 57/255, green: 126/255, blue: 247/255, alpha: 1)
-             button.alpha = 1.0
-             rightView = button
-             rightViewMode = .always
+        //show/hide button
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(systemName: "eye"), for: .selected)
+        button.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
         
-           
-        }
+        button.frame = CGRect(x: 0, y: 0, width: -12, height: 0)
+        button.addTarget(self, action: #selector(showHidePassword(_:)), for: .touchUpInside)
+        button.tintColor = UIColor.init(red: 57/255, green: 126/255, blue: 247/255, alpha: 1)
+        button.alpha = 1.0
+        rightView = button
+        rightViewMode = .always
         
-        @objc private func showHidePassword(_ sender: UIButton) {
-            sender.isSelected = !sender.isSelected
-            self.isSecureTextEntry = !sender.isSelected
-
-        }
         
     }
+    
+    @objc private func showHidePassword(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        self.isSecureTextEntry = !sender.isSelected
+        
+    }
+    
+}
 
 
 
