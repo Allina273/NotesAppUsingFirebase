@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         errorlabel.alpha = 0
         viewModel.delegate = self
     }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.EmailTextfield.text = nil
